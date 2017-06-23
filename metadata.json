@@ -242,8 +242,6 @@
             "color__menu-section-header--background" : "@color__secondary",
             "color__menu-section-featured--background" : "@color__secondary"
         },
-        "blog": {
-        },
         "ecommerce": {
             "color__ecomproduct-price--text" : "#919191"
         }
