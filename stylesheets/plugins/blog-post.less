@@ -61,17 +61,17 @@
 
     // Adds overlay to the image to make title text readable
     &:after {
-        background: -moz-radial-gradient(bottom, ellipse cover,  rgba(231,245,255,1) 35%, rgba(231,245,255,0) 100%);
-        background: -webkit-radial-gradient(bottom, ellipse cover,  rgba(231,245,255,1) 35%,rgba(231,245,255,0) 100%);
-        background: radial-gradient(ellipse at bottom,  rgba(231,245,255,1) 35%,rgba(231,245,255,0) 100%);
+        background: -moz-radial-gradient(bottom, ellipse cover,  rgba(231,245,255,0.95) 35%, rgba(231,245,255,0) 100%);
+        background: -webkit-radial-gradient(bottom, ellipse cover,  rgba(231,245,255,0.95) 35%,rgba(231,245,255,0) 100%);
+        background: radial-gradient(ellipse at bottom,  rgba(231,245,255,0.95) 35%,rgba(231,245,255,0) 100%);
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=1 );
         content:"";
         position: absolute;
         top: 0;
         left: -75%;
         right: 0;
-        bottom: -15%;
-        width: 200%;
+        bottom: -30%;
+        width: 250%;
     }
 }
 

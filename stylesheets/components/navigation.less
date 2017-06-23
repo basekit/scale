@@ -58,7 +58,8 @@
 }
 
 
-.navigation-list li:not(.navigation-item--child) > .item-name {
+.navigation-list li:not(.navigation-item--child) > .item-name,
+.navigation-list li.selected:not(.navigation-item--child) > .item-name {
 
 
     &:after {
@@ -77,7 +78,6 @@
     }
 
 
-    &.selected,
     &:hover,
     &:focus {
 
