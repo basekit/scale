@@ -243,10 +243,6 @@
             "color__menu-section-featured--background" : "@color__secondary"
         },
         "blog": {
-            "color__blogsearch-legend--background" : "#ffffff",
-            "color__blogsearch-legend--text" : "#ffffff",
-            "color__blogpost-title--background" : "#2B3E50",
-            "color__blogpost-title--text": "#ffffff"
         },
         "ecommerce": {
             "color__ecomproduct-price--text" : "#919191"

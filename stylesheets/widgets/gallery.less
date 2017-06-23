@@ -14,23 +14,23 @@
 
 .gallery-item {
     .flex-basis(30%);
-    margin-bottom: 5%;
+    padding-bottom: 5%;
+    overflow: hidden;
     position: relative;
 
     @media @tablet {
         .flex-basis(45%);
-        margin-bottom: 12%;
+        padding-bottom: 12%;
     }
 
     @media @mobile {
         .flex-basis(100%);
-        margin-bottom: 12%;
+        padding-bottom: 12%;
     }
 
 
     &:hover,
     &:focus {
-        box-shadow: 0 5px 50px rgba(0,0,0, 0.065);
 
 
         .gallery__caption,
@@ -44,12 +44,17 @@
         }
 
 
+        .figure {
+            box-shadow: 0 6px 25px rgba(0,0,0, 0.05);
+        }
+
+
         .gallery__figure:before {
-             bottom: -36px;
+             bottom: -34px;
         }
 
         .gallery__figure:after {
-            bottom: -25px;
+            bottom: -22px;
         }
 
 
@@ -59,7 +64,7 @@
 
 
         &:after {
-            bottom: -6px;
+            bottom: 54px;
         }
     }
 
@@ -84,6 +89,7 @@
 
 
 .gallery__figure {
+    position: relative;
 
     &:before {
         background-color: transparent;
@@ -130,7 +136,7 @@
     background-position: center;
     background-size: cover;
     overflow: hidden;
-    padding-bottom: 75%;
+    padding-bottom: 80%;
     position: relative;
 
 
@@ -144,7 +150,7 @@
         top: 0;
         left: -75%;
         right: 0;
-        bottom: -100%;
+        bottom: -125%;
         opacity: 0;
         visibility: hidden;
         width: 250%;
@@ -175,21 +181,39 @@
     visibility: hidden;
 }
 
+
 .gallery__image-title,
 .gallery__image-description {
     background-color: @color__gallery-title--background;
     color: @color__gallery-title--text;
-    display: inline-block;
     padding: 0 10px;
     z-index: 2;
 }
 
+
 .gallery__image-title {
-    margin-bottom: 10px;
+    display: inline;
+    padding: 6px 10px;
+
+    /* Needs prefixing */
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+
+
+    // Pushes description to the next line even though the title is set to inline
+    &:after {
+        content: "\A";
+        white-space: pre;
+    }
 }
 
-.gallery__image-description  {
-    display: none;
+
+.gallery__image-description {
+    display: inline-block;
+    font-size: 15px;
+    line-height: 24px;
+    margin-top: 5px;
+    padding: 6px 10px;
 }
 
 
@@ -204,8 +228,12 @@
 // Styles for responsive columns
 .responsivecolumns .columns-two-left,
 .responsivecolumns .columns-two-right {
-    .flex-basis(45%);
-    margin-bottom: 12%;
+
+
+    .gallery-item {
+        .flex-basis(45%);
+        padding-bottom: 12%;
+    }
  }
 
 
@@ -220,6 +248,6 @@
 
     .gallery-item {
         .flex-basis(100%);
-        margin-bottom: 15%;
+        padding-bottom: 15%;
     }
 }
