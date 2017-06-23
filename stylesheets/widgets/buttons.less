@@ -1,0 +1,37 @@
+
+// -----------------------------
+// LESS - Buttons
+// -----------------------------
+
+
+
+
+// Button Widget
+// ------------------
+
+.buttonwidget__button,
+.contactform__button {
+    background-color: @color__button--background;
+    .border-radius(50px);
+    color: @color__button--text;
+    .flex-display;
+    .align-items(center);
+    .justify-content(center);
+    padding: 16px 22px;
+    position: relative;
+
+
+    &:after {
+        background-color: lighten(@color__button--background, 100%);
+        .border-radius(100%);
+        color: @color__button--background;
+        content: "\0025B6";
+        font-size: 12px;
+        line-height: 20px;
+        margin-left: 15px;
+        padding: 1px 6px;
+        position: relative;
+        height: 20px;
+        width: 20px;
+    }
+}

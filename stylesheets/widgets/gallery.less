@@ -1,0 +1,225 @@
+
+// -----------------------------
+// LESS - Gallery
+// -----------------------------
+
+
+
+.gallery-list {
+    .flex-display;
+    .flex-wrap(wrap);
+    .justify-content(space-between);
+}
+
+
+.gallery-item {
+    .flex-basis(30%);
+    margin-bottom: 5%;
+    position: relative;
+
+    @media @tablet {
+        .flex-basis(45%);
+        margin-bottom: 12%;
+    }
+
+    @media @mobile {
+        .flex-basis(100%);
+        margin-bottom: 12%;
+    }
+
+
+    &:hover,
+    &:focus {
+        box-shadow: 0 5px 50px rgba(0,0,0, 0.065);
+
+
+        .gallery__caption,
+        .image-link:before,
+        .image-link:after,
+        .gallery__figure:before,
+        .gallery__figure:after,
+        &:after {
+            opacity: 1;
+            visibility: visible;
+        }
+
+
+        .gallery__figure:before {
+             bottom: -36px;
+        }
+
+        .gallery__figure:after {
+            bottom: -25px;
+        }
+
+
+        .gallery__image-link:after {
+            bottom: 0;
+        }
+
+
+        &:after {
+            bottom: -6px;
+        }
+    }
+
+
+    &:after {
+        background-image: image('/images/arrow.svg');
+        background-repeat: no-repeat;
+        bottom: -100px;
+        content: "";
+        height: 17px;
+        margin: 0 auto;
+        position: absolute;
+        left: 0;
+        right: 0;
+        width: 14px;
+        z-index: 3;
+        opacity: 0;
+        transition: opacity 0.8s ease-in, opacity 0.2s ease-out, visibility 0.8s ease-in, visiblity 0.2s ease-out, bottom 0.5s ease-in-out;
+        visibility: hidden;
+    }
+}
+
+
+.gallery__figure {
+
+    &:before {
+        background-color: transparent;
+        border: 2px solid white;
+        .border-radius(100%);
+        box-shadow: 0 7px 30px rgba(0,0,0, 0.055);
+        content: "";
+        margin: 0 auto;
+        height: 76px;
+        position: absolute;
+        bottom: -100px;
+        left: 0;
+        right: 0;
+        width: 76px;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.8s ease-in, opacity 0.2s ease-out, visibility 0.8s ease-in, visiblity 0.2s ease-out, bottom 0.5s ease-in-out;
+        z-index: 2;
+    }
+
+
+    &:after {
+        background-color: white;
+        .border-radius(100%);
+        box-shadow: 0 0 30px rgba(0,0,0, 0.1);
+        content: "";
+        margin: 0 auto;
+        height: 52px;
+        position: absolute;
+        bottom: -100px;
+        left: 0;
+        right: 0;
+        width: 52px;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.8s ease-in, opacity 0.2s ease-out, visibility 0.8s ease-in, visiblity 0.2s ease-out, bottom 0.5s ease-in-out;
+        z-index: 1;
+    }
+}
+
+
+.gallery__image-link {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    padding-bottom: 75%;
+    position: relative;
+
+
+    &:after {
+        background: -moz-radial-gradient(bottom, ellipse cover,  rgba(231,245,255,1) 30%, rgba(231,245,255,0) 150%);
+        background: -webkit-radial-gradient(bottom, ellipse cover,  rgba(231,245,255,1) 30%,rgba(231,245,255,0) 150%);
+        background: radial-gradient(ellipse at bottom,  rgba(231,245,255,1) 30%,rgba(231,245,255,0) 150%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=1 );
+        content:"";
+        position: absolute;
+        top: 0;
+        left: -75%;
+        right: 0;
+        bottom: -100%;
+        opacity: 0;
+        visibility: hidden;
+        width: 250%;
+        transition: opacity 0.5s ease, visibility 0.5s ease, bottom 0.8s ease-in-out;
+    }
+}
+
+
+.gallery__image {
+    display: none;
+    visibility: hidden;
+}
+
+
+.gallery__caption {
+    .flex-display;
+    .align-items(center);
+    .justify-content(center);
+    padding: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    text-align: center;
+    transition: opacity 0.8s ease-in, visibility 0.8s ease-in;
+    visibility: hidden;
+}
+
+.gallery__image-title,
+.gallery__image-description {
+    background-color: @color__gallery-title--background;
+    color: @color__gallery-title--text;
+    display: inline-block;
+    padding: 0 10px;
+    z-index: 2;
+}
+
+.gallery__image-title {
+    margin-bottom: 10px;
+}
+
+.gallery__image-description  {
+    display: none;
+}
+
+
+
+
+
+// -------------------------------------
+//  .  Gallery - Responsive Columns
+// -------------------------------------
+
+
+// Styles for responsive columns
+.responsivecolumns .columns-two-left,
+.responsivecolumns .columns-two-right {
+    .flex-basis(45%);
+    margin-bottom: 12%;
+ }
+
+
+.responsivecolumns .columns-three-left,
+.responsivecolumns .columns-three-middle,
+.responsivecolumns .columns-three-right,
+.responsivecolumns .columns-four-first,
+.responsivecolumns .columns-four-second,
+.responsivecolumns .columns-four-third,
+.responsivecolumns .columns-four-fourth {
+
+
+    .gallery-item {
+        .flex-basis(100%);
+        margin-bottom: 15%;
+    }
+}

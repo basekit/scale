@@ -1,0 +1,369 @@
+
+// -----------------------------
+//  LESS - Single Blog Post
+// -----------------------------
+
+
+
+
+
+// -----------------------------
+//  Table of Contents
+// -----------------------------
+
+//  1.   Blog Post Image
+
+//  2.   Blog Post Content
+//  2.1  -- Blog Post Header
+//  2.3  -- Blog Post Footer
+
+
+
+
+
+// ------------------------------
+//  1. Blog Post Image
+// ------------------------------
+
+
+// Image container
+.blogpost__post-image {
+    height: 550px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+
+    @media @mobile {
+        height: 450px;
+    }
+}
+
+
+// Use the background image
+.blogpost__image-link {
+    background-color: transparent;
+    background-size: cover;
+    background-position: center;
+    height: 550px;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+
+    @media @mobile {
+        height: 450px;
+    }
+
+
+    // Adds overlay to the image to make title text readable
+    &:after {
+        background: -moz-radial-gradient(bottom, ellipse cover,  rgba(231,245,255,1) 35%, rgba(231,245,255,0) 100%);
+        background: -webkit-radial-gradient(bottom, ellipse cover,  rgba(231,245,255,1) 35%,rgba(231,245,255,0) 100%);
+        background: radial-gradient(ellipse at bottom,  rgba(231,245,255,1) 35%,rgba(231,245,255,0) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=1 );
+        content:"";
+        position: absolute;
+        top: 0;
+        left: -75%;
+        right: 0;
+        bottom: -15%;
+        width: 200%;
+    }
+}
+
+
+// Hide the inline image
+.blogpost__image {
+    display: none;
+    visibility: hidden;
+}
+
+
+
+
+
+// ------------------------------
+//  2. Blog Post Content
+// ------------------------------
+
+
+
+
+// 2.1 - Post Header
+// ------------------------------
+
+
+// Position the blog post title over the image
+.blogpost__post-header {
+    display: table-cell;
+    height: 550px;
+    overflow: scroll;
+    padding: 0 100px;
+    position: relative;
+    text-align: center;
+    width: 100vw;
+    vertical-align: middle;
+
+    @media @tablet {
+        padding: 0 50px;
+    }
+
+    @media @mobile {
+        padding: 0 25px;
+        height: 450px;
+    }
+}
+
+
+// Post title text styling if image is available
+.blogpost__post-title {
+    background-color: @color__blogpost-title--background;
+    color: @color__blogpost-title--text;
+    display: inline;
+    font-family: @font__feature-headline--font-family;
+    font-size: @font__feature-headline--font-size;
+    font-weight: @font__feature-headline--font-weight;
+    letter-spacing: @font__feature-headline--letter-spacing;
+    line-height: @font__feature-headline--line-height;
+    margin: 0 auto;
+    padding: 5px 15px 10px;
+    -webkit-font-smoothing: antialiased;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+
+    @media @desktop-1024px {
+        font-size: bkscale(@font__feature-headline--font-size, 0.9);
+        line-height: bkscale(@font__feature-headline--line-height, 0.9);
+    }
+
+    @media @tablet {
+        font-size: bkscale(@font__feature-headline--font-size, 0.75);
+        line-height: bkscale(x@font__feature-headline--line-height, 0.75);
+    }
+}
+
+
+
+
+// 2.2 - Post Content
+// ------------------------------
+
+
+// Blog content area
+.blogpost__post-content {
+    margin: 0 auto;
+}
+
+
+.post-body {
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 50px 30px;
+
+    @media @mobile {
+        padding: 25px 0;
+    }
+
+
+    // Make paragraph text larger for blog post content
+    p {
+        font-size: bkscale(@font__p--font-size, 1.05);
+        line-height: bkscale(@font__p--line-height, 1.10);
+        padding-bottom: 20px;
+
+        @media @tablet-860px {
+            font-size: bkscale(@font__p--font-size, 1);
+            line-height: bkscale(@font__p--line-height, 1);
+        }
+
+        @media @mobile-650px {
+            font-size: bkscale(@font__p--font-size, 0.9);
+            line-height: bkscale(@font__p--line-height, 0.92);
+        }
+    }
+
+
+    // Add additional padding to blog post images
+    img {
+         padding: 1em 0 2em;
+
+         @media @mobile-650px {
+            padding: 1.5em 0 1em;
+         }
+    }
+}
+
+
+
+
+// 2.3 - Post Footer
+// ------------------------------
+
+
+// Blog post footer
+.blogpost__post-footer {
+    .flex-display;
+    .justify-content(flex-start);
+    -ms-flex-pack: start;
+    padding: 0;
+    padding: 10px 120px 10px 25px;
+    margin: 0 auto;
+    max-width: 800px;
+    position: relative;
+
+    @media @desktop-1024px {
+        .flex(0 100%);
+        padding-left: 25px;
+        top: 0;
+    }
+
+    @media @tablet {
+        display: block;
+        max-width: 100%;
+        padding: 0;
+    }
+}
+
+
+// Blog post attributes
+.blogpost__post-attributes {
+    display: inline-block;
+    .flex-order(1);
+    .align-self(flex-end);
+    -ms-flex-item-align: end;
+    margin: 0;
+}
+
+
+// Category and tags styling
+.blogpost__post-category,
+.blogpost__post-tags {
+    display: inline-block;
+    margin-right: 30px;
+    padding: 30px 0 10px;
+
+    @media @desktop-1024px {
+        padding: 10px 20px 5px 0;
+    }
+}
+
+
+// Blog post tags
+.blogpost__post-tags {
+    margin-left: 0;
+}
+
+
+// Font styling for blog metadata
+.blogpost__timestamp,
+.blogpost__category-title,
+.blogpost__category-link,
+.blogpost__tags-title,
+.blogpost__tag-link,
+.blogpost__product-attribute-title {
+    color: @color__form-label--text;
+    font-family: @font__p--font-family;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+
+// Category and tags title
+.blogpost__category-title,
+.blogpost__tags-title {
+    display: block;
+    line-height: 1;
+}
+
+
+// Make blog footer data inline
+.blogpost__timestamp,
+.blogpost__category-link,
+.blogpost__tag-link {
+    color: @color__h2--text;
+    display: inline-block;
+}
+
+
+// Timestamp - default overide
+.post-footer .timestamp { margin: 0; }
+
+
+// Timestamp
+.blogpost__timestamp {
+    display: inline-block;
+    .align-self(flex-end);
+    -ms-flex-item-align: end;
+    .flex-order(2);
+    margin: 0;
+    padding: 20px 0 20px 25px;
+
+    @media @desktop-1024px {
+        padding: 10px 20px 15px 0;
+    }
+
+    @media @mobile-650px {
+        padding: 20px 0;
+    }
+}
+
+
+// Add comma after any kind of tag
+.blogpost__category-link,
+.blogpost__tag-link {
+    &:after {
+        content: ",";
+        position: relative;
+    }
+}
+
+
+// Remove comma after last tag
+.blogpost__tag-item:last-child .tag-link:after,
+.blogpost__category-link:after {
+    display: none;
+}
+
+
+// Blog social icons
+.blogpost__sharing-links {
+    .align-self(flex-end);
+    .flex-order(3);
+    max-height: 55px;
+    padding: 0;
+    position: absolute;
+    right: 0;
+
+    @media @tablet {
+        position: relative;
+    }
+
+
+    li.network-item {
+        margin: 10px 16px 10px 0;
+    }
+
+
+    button {
+        background-color: transparent;
+        color: @color__p--text;
+        font-size: 16px;
+        min-width: initial;
+        padding: 0;
+        overflow: hidden;
+        height: 25px;
+        width: 15px;
+
+        &:hover {
+            background-color: transparent;
+            color: @color__p--text;
+        }
+    }
+}

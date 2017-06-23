@@ -1,0 +1,203 @@
+
+// -----------------------------
+// LESS - Social
+// -----------------------------
+
+
+
+.bk-zone {
+
+
+    // Hide social icons text
+    .social-name {
+        color: @color__socialicons--icon;
+        padding: 0 10px;
+        position: absolute;
+        line-height: 45px;
+        left: 0;
+        top: 0;
+        opacity: 0;
+        transition: left 0.25s ease-in, left ease-out 0.5s, opacity 0.5s ease-in, opacity 0.15s ease-out, color 0.5s ease-in-out;
+        z-index: 1;
+
+
+        &:after {
+            z-index: -1;
+        }
+    }
+
+
+    // If UL is hovered opaque all list items except one that is selected
+    .social-list {
+        display: inline-block;
+
+
+        &:hover .social-item {
+            opacity: 0.65;
+        }
+
+
+        // When hover is active show default hover state over UL
+        .social-item {
+            .transition(opacity 0.5s ease);
+
+            @media @mobile {
+                margin-right: 6px;
+            }
+
+
+            // Default hover state background colour
+            &:hover {
+                opacity: 1;
+                position: relative;
+                z-index: 1;
+            }
+
+
+            // When hovering anchor link show brand colours as background
+            &:hover .social-link {
+                .border-radius(25px 0 0 25px);
+                color: white;
+
+                // Twitter background colour
+                &.icon--twitter {
+                    background-color: #55acee;
+
+                    .social-name:after {
+                        background-color: darken(#55acee, 7%);
+                    }
+                }
+
+
+                // Facebook background colour
+                &.icon--facebook {
+                    background-color: #3b5998;
+
+                    .social-name:after {
+                        background-color: darken(#3b5998, 7%);
+                    }
+                }
+
+
+                // RSS background colour
+                &.icon--rss {
+                    background-color: #f26522;
+
+                    .social-name:after {
+                        background-color: darken(#f26522, 7%);
+                    }
+                }
+
+                // Linkedin background colour
+                &.icon--linkedin {
+                    background-color: #0077b5;
+
+                    .social-name:after {
+                        background-color: darken(#0077b5, 7%);
+                    }
+                }
+
+
+                // Google+ background colour
+                &.icon--googleplus {
+                    background-color: #dc4e41;
+
+                    .social-name:after {
+                        background-color: darken(#dc4e41, 7%);
+                    }
+                }
+
+
+                // Youtube background colour
+                &.icon--youtube {
+                    background-color: #cd201f;
+
+                    .social-name:after {
+                        background-color: darken(#cd201f, 7%);
+                    }
+                }
+
+
+                // Pintrest background colour
+                &.icon--pinterest {
+                    background-color: #bd081c;
+
+                    .social-name:after {
+                        background-color: darken(#bd081c, 7%);
+                    }
+                }
+
+
+                // Instagram background colour
+                &.icon--instagram {
+                    background-color: #3f729b;
+
+                    .social-name:after {
+                        background-color: darken(#3f729b, 7%);
+                    }
+                }
+            }
+        }
+
+    }
+
+
+    // Shows social icon name when hovered
+    .social-item {
+
+        @media @mobile {
+            margin-bottom: 10px;
+        }
+
+
+        // Slides social text in on hover
+        &:hover .social-name {
+            color: @color__socialicons--icon;
+            left: 42px;
+            opacity: 1;
+            padding: 0 20px 0 15px;
+
+            @media @mobile {
+                left: 45px;
+            }
+
+
+            &:after {
+                .border-radius(0 25px 25px 0);
+                content:"";
+                height: 45px;
+                position: absolute;
+                top: 0;
+                right: 0;
+                left: 0;
+                bottom: 0;
+            }
+        }
+    }
+
+
+    // Social links background
+    .social-link {
+        background-color: @color__socialicons--icon--background;
+        .border-radius(100%);
+        box-shadow: 0 2px 15px darken(@color__socialicons--icon--background, 10%);
+        display: inline-block;
+        line-height: 45px;
+        position: relative;
+        height: 45px;
+        width: 45px;
+        text-align: center;
+        .transition(background-color 0.5s ease);
+
+
+        &:before {
+            margin-right: 0;
+        }
+
+
+        &:hover {
+            .transition(background-color 0s);
+            text-decoration: none;
+        }
+    }
+}

@@ -1,0 +1,116 @@
+
+// -----------------------------
+//  LESS - Yelp Widget
+// -----------------------------
+
+
+
+
+
+// -----------------------------
+//  Table of Contents
+// -----------------------------
+
+//  1.   Yelp Widget
+
+
+
+
+
+// ------------------------------
+//  1. Yelp List
+// ------------------------------
+
+
+.yelpreview__review-list {
+    margin: 0;
+}
+
+
+.yelpreview__review-item {
+    background-color: @color__twitter-item--background;
+    border: 1px solid darken(@color__twitter-item--background, 7%);
+    position: relative;
+    padding: 30px 40px;
+}
+
+
+
+
+
+// ------------------------------
+//  2. Yelp Content
+// ------------------------------
+
+
+.yelpreview {
+    position: relative;
+
+
+    // Yelp widget title
+    .yelp-title {
+        margin-bottom: 15px;
+        padding-bottom: 0;
+    }
+
+
+    // Reviewer title
+    .review-title,
+    .timestamp {
+        color: lighten(@color__p--text, 10%);
+        font-family: @font__p--font-family;
+        font-size: 13px;
+        letter-spacing: 1px;
+        padding-bottom: 5px;
+        text-transform: uppercase;
+    }
+
+
+    .timestamp {
+        display: block;
+        font-size: 12px;
+        margin-top: 15px;
+    }
+
+
+    // Reviewer rating
+    .review-rating {
+        display: inline-block;
+        position: absolute;
+        right: 40px;
+        top: 20px;
+
+        @media @mobile-650px {
+            position: relative;
+            top: initial;
+            left: 0;
+            right :intial;
+        }
+    }
+
+
+    // Reviewers review
+    .review-excerpt {
+        margin-top: 5px;
+    }
+
+
+    // Link to review
+    .review-link {
+        background-color: @color__button--background;
+        color: @color__button--text;
+        display: inline-block;
+        font-family: @font__button--font-family;
+        font-size: 14px;
+        font-weight: @font__button--font-weight;
+        letter-spacing: 1px;
+        line-height: 1;
+        margin-top: 5px;
+        padding: 12px 16px;
+
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}

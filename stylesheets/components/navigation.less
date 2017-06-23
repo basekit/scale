@@ -1,0 +1,137 @@
+
+// -----------------------------
+// LESS - Navigation
+// -----------------------------
+
+
+
+
+// Navigation Icon
+// ------------------
+
+@import "@{templateLocal}/navigation-icon.less";
+
+
+
+// Navigation
+// ------------------
+
+
+[data-widget-type="extendednavigation"] {
+
+    @media @tablet {
+        height: 0;
+        opacity: 0;
+        visibility: hidden;
+        .transition(all 0.5s ease);
+    }
+}
+
+
+.nav-open [data-widget-type="extendednavigation"] {
+
+    @media @tablet {
+        background-color: @color__navigation--background;
+        margin-bottom: 30px;
+        height: auto;
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+
+.navigation-body ul:not(.navigation-list--children) {
+    margin-top: 25px;
+    margin-bottom: 0;
+
+    @media @tablet {
+        margin-top: 0;
+    }
+}
+
+
+.navigation-item {
+
+    @media @tablet {
+        display: block;
+    }
+}
+
+
+.navigation-list li:not(.navigation-item--child) > .item-name {
+
+
+    &:after {
+        background-color: transparent;
+        content: "";
+        display: block;
+        height: 0;
+        margin-top: 15px;
+        position: relative;
+        .transition(background-color 0.5s ease-in-out);
+
+        @media @tablet {
+            display: none;
+            visibility: hidden;
+        }
+    }
+
+
+    &.selected,
+    &:hover,
+    &:focus {
+
+        &:after {
+            background-color: @color__navigation--border;
+            margin-top: 12px;
+            height: 3px;
+        }
+    }
+}
+
+
+.navigation-item--child {
+
+    @media @tablet {
+        background-color: @color__twitter-item--background;
+    }
+}
+
+
+.navigation-list--children {
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.05);
+}
+
+
+.navigation-list--children .navigation-item:last-child .item-name {
+    padding-bottom: 10px;
+}
+
+
+.navigation-item .item-name {
+    color: @color__navigation--text;
+    padding-bottom: 0;
+
+    @media @tablet {
+        padding: 15px;
+    }
+
+
+    &.selected,
+    &:hover,
+    &:focus {
+        color: @color__navigation--text--selected;
+        padding-bottom: 0;
+
+        @media @tablet {
+            padding-bottom: 15px;
+        }
+    }
+}
+
+
+.navigation-toggle {
+    display: none;
+    visibility: hidden;
+}
+

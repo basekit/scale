@@ -1,0 +1,170 @@
+
+// -----------------------------
+// Table of Contents
+// -----------------------------
+
+//  LESS Includes
+//    - BK LESS Framework
+//    - Base Styles
+//    - Widgets
+//    - Plugins
+//    - Pages
+
+
+//  Theme Styles
+//    - Header
+//    - Main
+
+
+.bk-tpl-hidden { display: none;}
+
+// -----------------------------
+//  LESS Includes
+// -----------------------------
+
+
+
+// BK LESS Framework
+// ------------------
+
+@import "@{templateCommon}/bk-less-framework-v8.less";                      // V8 Framework
+
+
+
+
+// Base Styles
+// --------------
+
+@import "@{templateLocal}/stylesheets/base/mixins.less";                    // Mixins
+// @import "@{templateLocal}/stylesheets/base/typography.less";                // Typography
+
+
+
+
+// Site Components
+// ------------------
+
+@import "@{templateLocal}/stylesheets/components/header.less";
+@import "@{templateLocal}/stylesheets/components/fooer.less";
+
+
+
+
+// // Widgets Styles
+// // --------------
+
+// @import "@{templateLocal}/stylesheets/widgets/brand.less";                  // Logo & Companyname
+@import "@{templateLocal}/stylesheets/components/navigation.less";             // Navigation
+@import "@{templateLocal}/stylesheets/widgets/gallery.less";                // Gallery
+@import "@{templateLocal}/stylesheets/widgets/forms.less";                  // Forms
+@import "@{templateLocal}/stylesheets/widgets/social.less";                 // Social
+@import "@{templateLocal}/stylesheets/widgets/twitter.less";                // Twitter
+@import "@{templateLocal}/stylesheets/widgets/yelp.less";                   // Yelp
+@import "@{templateLocal}/stylesheets/widgets/line.less";                   // Line
+// @import "@{templateLocal}/stylesheets/widgets/contact-form.less";           // Contact Form
+// @import "@{templateLocal}/stylesheets/widgets/image.less";                  // Image
+@import "@{templateLocal}/stylesheets/widgets/slideshow.less";              // Slideshow
+// @import "@{templateLocal}/stylesheets/widgets/widgets.less";                // Other Widgets
+
+
+
+// // Plugin Styles
+// // ----------------------
+
+@import "@{templateLocal}/stylesheets/plugins/blog-post-list.less";         // Blog Post List
+@import "@{templateLocal}/stylesheets/plugins/blog-post.less";              // Blog Post
+// @import "@{templateLocal}/stylesheets/plugins/ecom-product.less";           // Ecom Product
+// @import "@{templateLocal}/stylesheets/plugins/ecom-product-list.less";      // Ecom Product List
+// @import "@{templateLocal}/stylesheets/plugins/ecom-basket.less";            // Ecom Basket
+
+
+
+// // Page Specific Styles
+// // ----------------------
+
+// @import "@{templateLocal}/stylesheets/pages/homepage-feature.less";         // Homepage Feature
+
+
+
+// -----------------------------
+//  Theme Styles
+// -----------------------------
+
+
+
+
+// Container
+// ---------------
+
+
+.widget--zone-widget {
+    margin-bottom: 25px;
+}
+
+.template-container {
+    margin: 0 auto;
+    max-width: 1200px;
+
+    @media only screen and (max-width: 1330px) {
+        padding: 0 65px;
+    }
+
+    @media @tablet {
+        padding: 0 45px;
+    }
+
+    @media @mobile {
+        padding: 0 30px;
+    }
+}
+
+
+
+// Main Zone
+// ---------------
+
+
+// Custom blockquote styling for blog post
+blockquote {
+    border: 2px solid @color__twitter-item--background;
+    color: @color__h2--text;
+    line-height: @font__p--line-height;
+    margin-bottom: 30px;
+    margin-top: 45px;
+    padding: 35px 25px;
+    position: relative;
+    text-align: center;
+
+    @media @mobile-650px {
+        margin-top: 35px;
+        padding: 35px 10px 30px;
+    }
+
+
+    &:before,
+    &:after {
+        position: absolute;
+    }
+
+
+    &:before {
+        content: "";
+        left: -20px;
+        background-color: @color__button--background;
+        border-radius: 100%;
+        height: 55px;
+        width: 55px;
+        top: -30px;
+    }
+
+
+    &:after {
+        color: white;
+        content: open-quote;
+        font-family: 'georgia', serif;
+        line-height: 0;
+        left: -7px;
+        font-size: 68px;
+        top: 16px;
+    }
+}

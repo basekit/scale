@@ -1,0 +1,231 @@
+
+// ----------------------------------------------
+// LESS - Widgets > Twitter
+// ----------------------------------------------
+
+
+
+
+// -----------------------------
+// #Table of Contents
+// -----------------------------
+
+//  1.   #Form Elements
+
+//  2.   #Text Inputs
+//  2.2  -- #Single Line Inputs
+//  2.3  -- #Multiple Lines Inputs
+
+//  2.   #Buttons
+
+
+
+
+// ------------------------------
+//  1.  #Tweet List
+// ------------------------------
+
+
+.tweet-list {
+    .flex-display;
+    .flex-wrap(wrap);
+    .justify-content(space-between);
+    .align-items(stretch);
+    .align-content(stretch);
+    margin-top: 60px;
+
+    @media @tablet {
+        display: inline-block;
+        width: 100%;
+    }
+}
+
+
+
+// ------------------------------
+//  2.   #Tweet Item
+// ------------------------------
+
+
+.tweet-item {
+    border: 2px solid @color__twitter-item--background;
+    position: relative;
+    padding: 50px 30px 25px;
+    margin: 0 5% 20px 0;
+    .flex(1 0 17%);
+
+    @media @tablet {
+        display: block;
+        margin: 0 0 50px 0;
+    }
+
+
+    &:last-child {
+        margin-bottom: 20px;
+        margin-right: 0;
+    }
+
+
+    p,
+    a {
+        color: @color__p--text;
+        padding-bottom: 0;
+        font-size: bkscale(@font__p--font-size, 0.9);
+        line-height: bkscale(@font__p--line-height, 0.7);
+    }
+
+
+    .tweet-wrap {
+        .flex-display;
+        .flex-direction(column);
+        .flex-wrap(wrap);
+        .justify-content(center);
+        .align-items(stretch);
+        .align-content(center);
+        max-width: 80%;
+        padding: 0;
+        text-align: left;
+        width: 100%;
+
+
+        a {
+            word-break: break-word;
+            word-wrap: break-word;
+        }
+    }
+
+
+    .account-link {
+        color: @color__twitter-account-name--text;
+        .flex-order(1);
+        font-family: @font__p--font-family;
+        font-size: bkscale(@font__p--font-size, 0.9);
+        line-height: bkscale(@font__p--line-height, 0.7);
+        font-weight: @font__p--font-weight;
+        letter-spacing: @font__p--letter-spacing;
+        position: absolute;
+        left: 30px;
+        top: -15px;
+        text-decoration: none;
+    }
+
+
+    .account-name {
+        background-color: @color__button--background;
+        display: inline-block;
+        padding: 5px 10px;
+        color: @color__button--text;
+        font-size: @font__p--font-size;
+        letter-spacing: 1px;
+    }
+
+
+    .tweet-content {
+        position: relative;
+        width: 100%;
+        padding-bottom: 10px;
+        .flex-order(0);
+
+
+        a {
+            word-wrap: break-word;
+            -ms-hyphens: auto;
+        }
+    }
+}
+
+
+
+// ------------------------------
+//  3.   #Avatar
+// ------------------------------
+
+
+.avatar {
+    position: absolute;
+    top: -25px;
+    right: 30px;
+}
+
+
+.avatar-link {
+    max-width: 65px;
+
+    @media @mobile {
+        max-width: 50px;
+    }
+}
+
+
+.avatar {
+    display: inline-block;
+    vertical-align: top;
+}
+
+
+.avatar-image {
+    .border-radius(60px);
+    box-shadow: 0 0 0 3px #d7e0e6;
+}
+
+
+// ------------------------------
+//  4.   #Tweet Metadata
+// ------------------------------
+
+
+.tweet-metadata {
+    font-size: 85%;
+    .flex-order(2);
+
+
+    .via,
+    a {
+        display: none;
+        visibility: hidden;
+    }
+
+
+    .timestamp {
+        color: #a5a6af;
+    }
+
+
+    .timestamp,
+    span {
+        font-size: 13px;
+        line-height: 20px;
+    }
+
+
+    .retweeted-by {
+        color: darken(@color__body--background, 30%);
+        display: inline-block;
+        width: 100%;
+    }
+}
+
+
+// ------------------------------
+//  5.   #Responsive Columns
+// ------------------------------
+
+
+.responsivecolumns {
+
+
+    .tweet-list,
+    .tweet-item {
+        display: block;
+    }
+
+
+    .tweet-item {
+        margin: 0 0 40px 0;
+
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

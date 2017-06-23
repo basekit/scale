@@ -1,0 +1,238 @@
+
+// -----------------------------
+// LESS - Header
+// -----------------------------
+
+
+
+
+// Header
+// ------------------
+
+.template-header {
+    background-color: transparent;
+    border-top: 40px solid @color__header--background;
+}
+
+
+
+// Header - Social
+// ------------------
+
+.template-header--social {
+    .flex-display;
+    .justify-content(space-between);
+    margin-top: -20px;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 6;
+
+    @media @tablet {
+        .flex-wrap(wrap);
+        margin-bottom: 40px;
+    }
+
+
+    .social-link,
+    .image-link {
+        background-color: @color__socialicons--icon--background;
+        .border-radius(100%);
+        box-shadow: 0 2px 15px fade(@color__header--background, 20%);
+        cursor: pointer;
+        display: block;
+        line-height: 40px;
+        height: 40px;
+        width: 40px;
+        text-align: center;
+        transition: background-color 0.5s ease, color 0.25s ease, box-shadow 0.5s ease;
+
+
+        &:before {
+            margin-right: 0;
+        }
+
+
+        &:hover {
+            color: white;
+            box-shadow: 0 2px 15px fade(@color__header--background, 30%);
+            text-decoration: none;
+
+
+            // Twitter background colour
+            &.icon--twitter {
+                background-color: #55acee!important;
+            }
+
+
+            // Facebook background colour
+            &.icon--facebook {
+                background-color: #3b5998!important;
+            }
+
+
+            // RSS background colour
+            &.icon--rss {
+                background-color: #f26522!important;
+            }
+
+
+            // Linkedin background colour
+            &.icon--linkedin {
+                background-color: #0077b5!important;
+            }
+
+
+            // Google+ background colour
+            &.icon--googleplus {
+                background-color: #dc4e41!important;
+            }
+
+
+            // Youtube background colour
+            &.icon--youtube {
+                background-color: #cd201f!important;
+            }
+
+
+            // Pintrest background colour
+            &.icon--pinterest {
+                background-color: #bd081c!important;
+            }
+
+
+            // Instagram background colour
+            &.icon--instagram {
+                background-color: #3f729b!important;
+            }
+        }
+    }
+
+
+    .social-item {
+
+        @media @mobile {
+            margin-right: 6px;
+        }
+    }
+
+
+    .social-name {
+        display: none;
+    }
+
+
+    .imagewidget__image-link {
+        cursor: pointer;
+        .flex-display;
+        .align-content(center);
+        .justify-content(center);
+    }
+
+
+    .imagewidget__image {
+        max-width: 17px;
+    }
+
+
+    [data-widget-type="image"] .widget-overlay {
+        display: none!important;
+        visibility: hidden;
+    }
+}
+
+
+
+// Header - Advanced Contact Form
+// -------------------------------
+
+
+.template-header {
+
+
+    [data-widget-type="advancedcontactform"],
+    [data-name="advancedcontactform"] {
+        background-color: @color__body--background;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        overflow: hidden;
+        .transition(all 0.25s ease-in-out);
+        .flex-display;
+        .flex-direction(column);
+        .justify-content(center);
+        .align-content(center);
+        .align-items(center);
+        margin: 0;
+        .transform(translate(0px, 40px));
+        opacity: 0;
+        visibility: hidden;
+        z-index: 5;
+
+        @media @mobile-650px {
+            .justify-content(flex-end);
+        }
+
+
+        .contact-open & {
+            .transform(translate(0, 40px));
+            opacity: 1;
+            overflow-y: scroll;
+            visibility: visible;
+        }
+    }
+
+
+    .advancedcontactform {
+        margin: auto 0;
+        max-width: 650px;
+        width: 100%;
+
+
+        &__form {
+            @media @mobile-650px {
+                margin-bottom: 0;
+                padding: 30px 0;
+            }
+        }
+
+
+        &__legend {
+            color: white;
+        }
+
+
+        &__button {
+            background-color: #e7a022;
+            color: white;
+        }
+    }
+}
+
+
+
+// Header - Brand
+// ------------------
+
+.template-header--brand {
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+[data-widget-type="logo"] {
+    margin-bottom: 2px;
+}
+
+
+
+// Header - Navigation
+// ----------------------
+
+.template-header--nav {
+
+    @media @tablet {
+        padding: 20px 0 0;
+    }
+}

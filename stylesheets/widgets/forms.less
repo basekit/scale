@@ -1,0 +1,381 @@
+
+// ----------------------------------------------
+// LESS - Widgets > Forms
+// ----------------------------------------------
+
+
+
+
+// -----------------------------
+// #Table of Contents
+// -----------------------------
+
+//  1.   #Form Elements
+
+//  2.   #Text Inputs
+//  2.2  -- #Single Line Inputs
+//  2.3  -- #Multiple Lines Inputs
+
+//  2.   #Buttons
+
+//  3.   #Selects
+//  3.1  -- #Select Wrap
+//  3.2  -- #Selects
+//  3.3  -- #Size Variations Mixins
+
+//  4 #Placeholders
+
+
+
+
+// ------------------------------
+//  1.   #Form Elements
+// ------------------------------
+
+
+.contactform__form,
+.blogsearch__form,
+.advancedcontactform__form,
+.signupform__form {
+    border: 2px solid @color__form--background;
+    margin-top: 60px;
+    padding: 60px 50px 50px;
+
+    @media @mobile {
+        padding: 30px 20px 20px;
+    }
+}
+
+
+.form-body .form-group {
+    margin-bottom: 15px;
+
+
+    &:last-child {
+        margin-bottom: 0;
+        padding-top: 20px;
+    }
+}
+
+
+.signupform__form-body {
+    .flex-display;
+    .align-items(flex-end);
+    .justify-content(space-between);
+
+
+    .form-group:first-child {
+        .flex(1 0 auto);
+        margin: 0 35px 0 0;
+    }
+
+    .form-group:last-child {
+        .flex(0 1 auto);
+        .align-self(flex-end);
+        margin: 0;
+    }
+}
+
+
+.contactform__legend,
+.signupform__legend,
+.blogsearch__legend,
+.ecomproductslist__legend,
+.advancedcontactform__legend,
+.signupform__legend {
+    background-color: @color__form-legend--background;
+    color: @color__form-legend--text;
+    font-family: @font__h3--font-family;
+    font-size: @font__h3--font-size;
+    font-weight: @font__h3--font-weight;
+    line-height: 42px;
+    padding: 0 13px;
+    position: absolute;
+    top: -20px;
+}
+
+
+.form-group .label {
+    font-size: 15px;
+
+
+    &:after {
+        content: ":";
+        margin-left: 4px;
+        position: relative;
+    }
+}
+
+
+
+
+
+// ------------------------------
+//  2.   #Text Inputs
+// ------------------------------
+
+
+input[type="search"],
+input[type="email"],
+input[type="password"],
+.input--single-line,
+.input--search,
+textarea {
+    background-color: transparent;
+    border-color: @color__form--border;
+    border-style: solid;
+    border-width: 0 0 2px 0;
+    color: @color__p--text;
+    display: inline-block;
+    font-size:  16px;
+    font-weight: @font__p--font-weight;
+    line-height: 30px;
+    outline: 0;
+    padding: 5px 0;
+    .transition(border-color 0.35s ease);
+    -webkit-appearance: none;
+
+    &:hover,
+    &:focus {
+        box-shadow: none;
+        border-color: darken(@color__form--border, 40%);
+        outline: 0;
+    }
+}
+
+
+
+// 2.2   #Single Line Inputs
+// ------------------------------
+
+
+input[type="search"],
+input[type="email"],
+input[type="password"],
+.input--single-line,
+.input--search,
+.product-filters .input--search {
+    min-height: 54px;
+}
+
+
+
+// 2.3   #Multiple Lines Inputs
+// ------------------------------
+
+
+textarea {
+    display: block;
+    padding: 0;
+}
+
+
+
+
+// ------------------------------
+//  2.   #Buttons
+// ------------------------------
+
+
+.buttonwidget__button,
+.contactform__button,
+.blogsearch__button,
+.signupform__button,
+.ecomproductslist__button,
+.tweet__button,
+.paypalbuynow__button,
+.dropbox__button,
+.icon--filedownload,
+.phone-number-link {
+    background-color: @color__button--background;
+    color: @color__button--text;
+    .flex-display(inline-flex);
+    .align-items(center);
+    .justify-content(center);
+    padding: 14px 25px 14px 25px;
+    position: relative;
+    text-decoration: none;
+}
+
+
+.buttonwidget__button {
+    padding: 14px 20px 14px 22px;
+
+
+    &:after {
+        background-color: lighten(@color__button--background, 100%);
+        .border-radius(100%);
+        color: @color__button--background;
+        content: "\0025B6";
+        font-size: 12px;
+        line-height: 20px;
+        margin-left: 15px;
+        padding: 1px 6px;
+        position: relative;
+        height: 20px;
+        width: 20px;
+    }
+}
+
+
+.phone-number-link:hover {
+    text-decoration: none;
+}
+
+
+
+
+// ------------------------------
+//  3.   Selects
+// ------------------------------
+
+
+
+// 3.1 -- #Select Wrap
+// ------------------------------
+
+
+.select-wrap {
+    position: relative;
+    box-shadow: inset 0px -1px 0px 0px fade(@font-swatch5-color, 20%);
+
+    &:hover {
+        box-shadow: inset 0px -2px 0px 0px @color-swatch2;
+    }
+
+
+    // Icon
+    &:after {
+        content: '\f107';
+        font-family: 'FontAwesome', sans-serif;
+        display: inline-block;
+        height: 1em;
+        line-height: 1em;
+        text-align: center;
+        font-size: 20px;
+        color: fade(@font-swatch5-color, 30%);
+        position: absolute;
+        right: 0;
+        top: 50%;
+        margin-top: -0.5em;
+        z-index: 900;
+    }
+
+    &:hover:after {
+        color: @color-swatch2;
+    }
+}
+
+
+
+// 3.2 -- #Select
+// ------------------------------
+
+
+.select {
+    border: none;
+    color: @font-swatch5-color;
+    border-radius: 0;
+    background-color: transparent;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 0 1.5em 0 0;
+    display: block;
+    width: 100%;
+    position: relative;
+    font-family:  @font-swatch7-font-family;
+    font-size:  @font-swatch7-font-size;
+    font-weight: @font-swatch7-font-weight;
+
+    @media @mobile {
+        font-size: bkscale(@font-swatch7-font-size, 0.8);
+    }
+
+    &:hover, &:focus {
+        background-color: transparent;
+    }
+
+}
+
+.select::-ms-expand {
+    display: none;
+}
+
+
+
+//  3.3 -- #Size Variations Mixins
+// -------------------------------
+
+
+// Select - Medium Size
+
+.select.medium {
+    .select {
+        font-size: bkscale(@font-swatch5-font-size, 0.82);
+    }
+
+    // Icon
+
+    &:after {
+        font-size: 18px;
+    }
+}
+
+// Select - Small Size
+
+.select.small {
+    .select {
+        font-size: bkscale(@font-swatch5-font-size, 0.7);
+    }
+
+    // Icon
+
+    &:after {
+        font-size: 16px;
+    }
+}
+
+
+
+//  4. #Placeholders
+// -------------------------------
+
+
+::-webkit-input-placeholder {
+    color: @color__p--text;
+    .transition(color 0.35s ease);
+}
+
+:-moz-placeholder { /* Firefox 18- */
+    color: @color__p--text;
+    .transition(color 0.35s ease);
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+    color: @color__p--text;
+    .transition(color 0.35s ease);
+}
+
+:-ms-input-placeholder {
+    color: @color__p--text;
+    .transition(color 0.35s ease);
+}
+
+
+input:focus {
+    &::-webkit-input-placeholder {
+        color: transparent;
+    }
+
+    &:-moz-placeholder {
+        color: transparent;
+    }
+
+    &::-moz-placeholder {
+        color: transparent;
+    }
+
+    &:-ms-input-placeholder {
+        color: transparent;
+    }
+}

@@ -1,0 +1,42 @@
+<header class="template-header">
+    <div class="template-container">
+
+        <!-- Header Social & Profile Bar -->
+        <div class="template-header--social">
+            {{widget('socialicons', 'header-social', {
+                'facebook': 'https://www.facebook.com/mycompanyname',
+                'twitter': 'https://twitter.com/mycompanyname',
+                'youtube': 'https://www.youtube.com/user/mycompanyname',
+                'instagram': 'https://www.instagram.com/mycompanyname',
+                'align': 'widget-align-left'
+            })|raw}}
+
+            {{widget('image', 'header-contact', {'src': asset("/images/contact.svg")})|raw}}
+        </div>
+
+        <!-- Brand & Navigation -->
+         <div class="template-header--brand">
+            {{widget('logo', 'header-logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+            {{widget('companyname', 'header-companyname', {"business": "profile", "showTplWidget":"0"})|raw}}
+        </div>
+
+        <div class="template-header--nav">
+
+            <div class="navigation-icon--container">
+                <input id="click" name="exit" type="checkbox" />
+                <label for="click"><span class="navigation-icon"></span></label>
+            </div>
+
+            {{widget('extendednavigation', 'header-navigation', {'align': 'center'})|raw}}
+        </div>
+
+    </div>
+
+    <!-- Advanced Contact Form -->
+    {{widget('advancedcontactform', 'header-form', {
+        'text': 'Submit',
+        'formTitle': 'Contact Us',
+        'email': 'profile'
+    })|raw}}
+
+</header>
