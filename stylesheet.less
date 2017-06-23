@@ -45,7 +45,7 @@
 // ------------------
 
 @import "@{templateLocal}/stylesheets/components/header.less";
-@import "@{templateLocal}/stylesheets/components/fooer.less";
+@import "@{templateLocal}/stylesheets/components/footer.less";
 
 
 
@@ -107,27 +107,34 @@
     max-width: 1200px;
 
     @media only screen and (max-width: 1330px) {
-        padding: 50px 65px 0;
+        padding: 0 65px;
     }
 
     @media @tablet {
-        padding: 40px 45px 0;
+        padding: 0 45px;
     }
 
     @media @mobile {
-        padding: 30px 30px 0;
+        padding: 0 30px;
     }
 }
 
 
-.template-container > .bk-zone {
-     padding-top: 50px;
-}
+.template-container .bk-zone {
+
+    .widget:first-child {
+        padding-top: 50px;
+    }
 
 
-[data-widget-type="responsiveslideshow"] + .bk-zone {
-    padding-top: 0;
+    .widget:first-child[data-name="map"],
+    .widget:first-child[data-name="image"],
+    .widget:first-child[data-name="slideshow"],
+    .widget:first-child[data-name="youtube"] {
+        padding-top: 0;
+    }
 }
+
 
 
 
