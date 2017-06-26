@@ -146,6 +146,11 @@
 // -------------------------------
 
 
+.contact-open {
+    position: fixed;
+}
+
+
 .template-header {
 
 
@@ -170,8 +175,9 @@
         visibility: hidden;
         z-index: 5;
 
-        @media @mobile-650-650px {
+        @media @mobile-650 {
             .justify-content(flex-end);
+            padding: 25px;
         }
 
 
@@ -191,7 +197,7 @@
 
 
         &__form {
-            @media @mobile-650-650px {
+            @media @mobile-650 {
                 margin-bottom: 0;
                 padding: 30px 0;
             }
