@@ -35,6 +35,14 @@
         <script src="{{ asset('scripts/custom.js')}}"></script>
 
 
+        <script>
+            (function () {
+                var decoEls = document.querySelectorAll('.responsiveslideshow__image-title');
+                decoFill(decoEls);
+            }(window));
+        </script>
+
+
         <!-- Page Specific Scripts -->
         {% block scripts %}
         {% endblock %}

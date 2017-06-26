@@ -17,14 +17,12 @@
     overflow: hidden;
     position: relative;
 
-    @media @tablet {
+    @media @tablet-860 {
         .flex-basis(45%);
-        padding-bottom: 12%;
     }
 
-    @media @mobile {
+    @media @mobile-650 {
         .flex-basis(100%);
-        padding-bottom: 12%;
     }
 
 
@@ -63,10 +61,10 @@
 
 
         &:after {
-            bottom: 48px;
+            bottom: 54px;
 
-            @media @mobile {
-                bottom: 34px;
+            @media @mobile-860 {
+                bottom: 44px;
             }
         }
     }
@@ -92,8 +90,13 @@
 
 
 .gallery__figure {
-    margin-bottom: 15%;
+    margin-bottom: 60px;
     position: relative;
+
+    @media @mobile-650 {
+        margin-bottom: 50px;
+    }
+
 
     &:before {
         background-color: transparent;
