@@ -111,7 +111,7 @@
     }
 
     @media @tablet {
-        padding: 0 45px;
+        padding: 0 60px;
     }
 
     @media @mobile {
@@ -124,6 +124,10 @@
 
     .widget:first-child {
         padding-top: 50px;
+
+        @media @mobile {
+            padding-top: 20px;
+        }
     }
 
 
@@ -184,5 +188,25 @@ blockquote {
         left: -7px;
         font-size: 68px;
         top: 16px;
+    }
+}
+
+
+.imagewidget {
+
+
+    &__image-link {
+
+        @media @mobile {
+            display: block;
+        }
+    }
+
+
+    &__image {
+
+        @media @mobile {
+            width: 100%;
+        }
     }
 }

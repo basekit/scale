@@ -33,6 +33,18 @@
 // ------------------------------
 
 
+.widget + {
+
+
+    [data-name="signupform"],
+    [data-name="blogsearch"],
+    [data-name="contactform"],
+    [data-name="advancedcontactform"] {
+        margin-top: 35px;
+    }
+}
+
+
 .contactform__form,
 .blogsearch__form,
 .advancedcontactform__form,
@@ -65,16 +77,32 @@
     .align-items(flex-end);
     .justify-content(space-between);
 
+    @media @mobile {
+        display: block;
+    }
+
 
     .form-group:first-child {
         .flex(1 0 auto);
         margin: 0 35px 0 0;
+
+        @media @mobile {
+            margin-right: 0;
+        }
     }
 
     .form-group:last-child {
         .flex(0 1 auto);
         .align-self(flex-end);
         margin: 0;
+    }
+
+
+    .button--submit {
+
+        @media @mobile {
+            width: 100%;
+        }
     }
 }
 

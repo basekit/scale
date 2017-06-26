@@ -14,7 +14,6 @@
 
 .gallery-item {
     .flex-basis(30%);
-    padding-bottom: 5%;
     overflow: hidden;
     position: relative;
 
@@ -64,7 +63,11 @@
 
 
         &:after {
-            bottom: 54px;
+            bottom: 48px;
+
+            @media @mobile {
+                bottom: 34px;
+            }
         }
     }
 
@@ -89,6 +92,7 @@
 
 
 .gallery__figure {
+    margin-bottom: 15%;
     position: relative;
 
     &:before {
