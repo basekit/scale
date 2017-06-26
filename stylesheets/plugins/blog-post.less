@@ -27,7 +27,7 @@
 
 
 .blogpost:not(.post-article--has-image) .post-header {
-    background-color: @color__blogpost-title--background;
+    background-color: @color__blogpost--background;
 }
 
 
@@ -66,10 +66,10 @@
 
     // Adds overlay to the image to make title text readable
     &:after {
-        background: -moz-radial-gradient(bottom, ellipse cover, fade(@color__blogpost-title--background, 95%) 35%, @color__blogpost-title--background 100%);
-        background: -webkit-radial-gradient(bottom, ellipse cover, fade(@color__blogpost-title--background, 95%) 35%, @color__blogpost-title--background 100%);
-        background: radial-gradient(ellipse at bottom, fade(@color__blogpost-title--background, 95%) 35%, @color__blogpost-title--background 100%);
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='fade(@color__blogpost-title--background, 95%)', endColorstr='@color__blogpost-title--background',GradientType=1 );
+        background: -moz-radial-gradient(bottom, ellipse cover, fade(@color__blogpost--background, 95%) 35%, @color__blogpost--background 100%);
+        background: -webkit-radial-gradient(bottom, ellipse cover, fade(@color__blogpost--background, 95%) 35%, @color__blogpost--background 100%);
+        background: radial-gradient(ellipse at bottom, fade(@color__blogpost--background, 95%) 35%, @color__blogpost--background 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='fade(@color__blogpost--background, 95%)', endColorstr='@color__blogpost--background',GradientType=1 );
         content:"";
         position: absolute;
         top: 0;

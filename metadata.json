@@ -237,7 +237,8 @@
             "color__feature-content--background": "#fff"
         },
         "blog": {
-            "color__blogpost-title--background": "#e7f5ff"
+            "color__blogpost-title--background": "#e7f5ff",
+            "color__blogpost--background": "#e7f5ff"
         },
         "ecommerce": {
             "color__ecomproductslist-product-title--background": "#2B3E50",
