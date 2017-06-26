@@ -243,6 +243,8 @@
             "color__menu-section-featured--background" : "@color__secondary"
         },
         "ecommerce": {
+            "color__ecomproductslist-product-title--background": "#2B3E50",
+            "color__ecomproductslist-product-title--text": "#FFFFFF",
             "color__ecomproduct-price--text" : "#919191"
         }
     }
