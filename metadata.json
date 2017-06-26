@@ -218,24 +218,6 @@
             "color__slideshow-pagination-item--background--selected": "#2B3E50",
             "color__slideshow-pagination-item--text": "#24455f"
         },
-        "feature": {
-            "color__feature--background": "#fff",
-            "font__feature-headline--font-family" : "@font-swatch8-font-family",
-            "font__feature-headline--font-size" : "45px",
-            "font__feature-headline--font-weight" : "300",
-            "font__feature-headline--line-height" : "56px",
-            "color__feature-headline--text" : "@color__h2--text",
-            "font__feature-headline--letter-spacing": "0",
-            "font__feature-strapline--font-family" : "@font-swatch9-font-family",
-            "font__feature-strapline--font-size" : "18px",
-            "font__feature-strapline--font-weight" : "400",
-            "font__feature-strapline--line-height" : "32px",
-            "font__feature-strapline--letter-spacing" : "0px",
-            "color__feature-strapline--text" : "#A2A1A1",
-            "color__feature-button--text" : "#fff",
-            "color__feature-button--background" : "#1e1e1e",
-            "color__feature-content--background": "#fff"
-        },
         "blog": {
             "color__blogpost-title--background": "#e7f5ff",
             "color__blogpost--background": "#e7f5ff"
