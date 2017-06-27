@@ -26,7 +26,7 @@
 // ------------------------------
 
 
-.blogpost:not(.post-article--has-image) .post-header {
+.blogpost__post-article:not(.post-article--has-image) .post-header {
     background-color: @color__blogpost--background;
 }
 
@@ -66,9 +66,9 @@
 
     // Adds overlay to the image to make title text readable
     &:after {
-        background: -moz-radial-gradient(bottom, ellipse cover, fade(@color__blogpost--background, 95%) 35%, @color__blogpost--background 100%);
-        background: -webkit-radial-gradient(bottom, ellipse cover, fade(@color__blogpost--background, 95%) 35%, @color__blogpost--background 100%);
-        background: radial-gradient(ellipse at bottom, fade(@color__blogpost--background, 95%) 35%, @color__blogpost--background 100%);
+        background: -moz-radial-gradient(bottom, ellipse cover, fade(@color__blogpost--background, 95%) 35%, fade(@color__blogpost--background, 0) 100%);
+        background: -webkit-radial-gradient(bottom, ellipse cover, fade(@color__blogpost--background, 95%) 35%, fade(@color__blogpost--background, 0) 100%);
+        background: radial-gradient(ellipse at bottom, fade(@color__blogpost--background, 95%) 35%, fade(@color__blogpost--background, 0) 100%);
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='fade(@color__blogpost--background, 95%)', endColorstr='@color__blogpost--background',GradientType=1 );
         content:"";
         position: absolute;
@@ -175,8 +175,8 @@
     max-width: 800px;
     padding: 50px 30px;
 
-    @media @mobile-650 {
-        padding: 25px 0;
+    @media @tablet-860 {
+        padding: 30px 0;
     }
 
 
@@ -186,14 +186,9 @@
         line-height: bkscale(@font__p--line-height, 1.10);
         padding-bottom: 20px;
 
-        @media @tablet-860-860px {
-            font-size: bkscale(@font__p--font-size, 1);
-            line-height: bkscale(@font__p--line-height, 1);
-        }
-
         @media @mobile-650-650px {
-            font-size: bkscale(@font__p--font-size, 0.9);
-            line-height: bkscale(@font__p--line-height, 0.92);
+            font-size: bkscale(@font__p--font-size, 1);
+            line-height: bkscale(@font__p--line-height, 1.05);
         }
     }
 
@@ -202,7 +197,7 @@
     img {
          padding: 1em 0 2em;
 
-         @media @mobile-650-650px {
+         @media @mobile-650 {
             padding: 1.5em 0 1em;
          }
     }
@@ -320,7 +315,7 @@
         padding: 10px 20px 15px 0;
     }
 
-    @media @mobile-650-650px {
+    @media @mobile-650 {
         padding: 20px 0;
     }
 }

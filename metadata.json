@@ -3,7 +3,7 @@
     "widgetVersion": 2,
     "thumbnail":"thumbnail.png",
     "templateType":"standard",
-    "pageTypes": ["home", "blogpost"],
+    "pageTypes": ["home"],
     "screenshot":"screenshot.jpg",
      "images":[
     ],
@@ -138,7 +138,7 @@
             "color__h2--text": "#24455f",
             "font__h3--font-family" : "@font-swatch3-font-family",
             "font__h3--font-size" : "22px",
-            "font__h3--font-weight" : "400",
+            "font__h3--font-weight" : "600",
             "font__h3--line-height" : "34px",
             "font__h3--letter-spacing" : "0px",
             "color__h3--text": "#24455f",
@@ -188,7 +188,7 @@
             "font__button--font-size" : "15px",
             "font__button--font-weight" : "400",
             "font__button--line-height" : "26px",
-            "font__button--letter-spacing" : "2px"
+            "font__button--letter-spacing" : "1px"
         },
         "twitter": {
             "color__twitter-item--background": "#f1f4f7",

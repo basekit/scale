@@ -1,0 +1,113 @@
+
+// -----------------------------
+// LESS - Typography
+// -----------------------------
+
+
+
+
+// Global
+// -------------------------
+
+
+body {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+
+
+
+// Headings
+// -------------------------
+
+
+h1 {
+    color: @color__h1--text;
+
+    @media @mobile-650 {
+        font-size: bkscale(@font__h1--font-size, 0.85);
+        line-height: bkscale(@font__h1--line-height, 0.85);
+    }
+
+
+    &.pagetitle-text  {
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+}
+
+
+h2 {
+    color: @color__h2--text;
+
+    @media @mobile-650 {
+        font-size: bkscale(@font__h2--font-size, 0.9);
+        line-height: bkscale(@font__h2--line-height, 0.9);
+    }
+}
+
+
+
+
+// Body Text
+// -------------------------
+
+p {
+    @media @mobile-650 {
+        font-size: bkscale(@font__p--font-size, 0.95);
+        line-height: bkscale(@font__p--line-height, 0.85);
+    }
+}
+
+
+
+
+// Blockquote
+// -------------------------
+
+
+blockquote {
+    border: 2px solid @color__twitter-item--background;
+    color: @color__h2--text;
+    line-height: @font__p--line-height;
+    margin-bottom: 30px;
+    margin-top: 45px;
+    padding: 35px 25px;
+    position: relative;
+    text-align: center;
+
+    @media @mobile-650 {
+        margin-top: 35px;
+        padding: 35px 10px 30px;
+    }
+
+
+    &:before,
+    &:after {
+        position: absolute;
+    }
+
+
+    &:before {
+        content: "";
+        left: -20px;
+        background-color: @color__button--background;
+        border-radius: 100%;
+        height: 55px;
+        width: 55px;
+        top: -30px;
+    }
+
+
+    &:after {
+        color: white;
+        content: open-quote;
+        font-family: 'georgia', serif;
+        line-height: 0;
+        left: -7px;
+        font-size: 68px;
+        top: 16px;
+    }
+}
+

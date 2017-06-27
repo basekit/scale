@@ -51,7 +51,7 @@
     max-width: 50%;
     padding-right: 40px;
 
-    @media @tablet-860-860px {
+    @media @tablet-860 {
         .flex(1 0 100%);
         max-width: 100%;
         padding-right: 0;
@@ -61,7 +61,7 @@
     &:nth-child(3n) {
         padding-right: 40px;
 
-        @media @tablet-860-860px {
+        @media @tablet-860 {
             padding-right: 0;
         }
     }
@@ -96,7 +96,7 @@
         height: 300px;
     }
 
-    @media @mobile-650-650px {
+    @media @mobile-650 {
         height: 200px;
     }
 }
@@ -122,7 +122,7 @@
     text-align: center;
     width: 100%;
 
-    @media @mobile-650-650px {
+    @media @mobile-650 {
         padding: 0;
     }
 }
@@ -147,6 +147,10 @@
 
     &__title-link {
         color: @color__h2--text;
+
+        &:hover {
+            text-decoration: none;
+        }
     }
 
 

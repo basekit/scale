@@ -1,0 +1,239 @@
+
+// -----------------------------
+//  LESS - Ecom Product
+// -----------------------------
+
+
+
+
+
+// -----------------------------
+//  Table of Contents
+// -----------------------------
+
+//  1.   Ecom Product
+
+
+
+
+.ecomproduct {
+
+
+    &__product-content {
+        margin: 0 auto;
+        max-width: 650px;
+    }
+
+
+    &__product-title {
+        margin-bottom: 0;
+        padding-bottom: 4px;
+    }
+
+
+    &__product-price {
+        color: @color__ecomproduct-price--text;
+        font-size: 26px;
+        padding-bottom: 30px;
+    }
+
+
+    &__product-actions {
+        margin: 0 0 30px;
+        position: relative;
+    }
+
+
+    &__fieldset {
+        margin-bottom: 25px;
+
+        + .form-group {
+            width: 48%;
+
+            @media @moble-650 {
+                width: 100%;
+            }
+        }
+    }
+
+
+    &__view-basket-wrap {
+        margin-top: -60px;
+        position: absolute;
+        right: 0;
+        width: 48%;
+
+        @media @moble-650 {
+            margin-top: 0;
+            position: relative;
+            width: 100%;
+        }
+    }
+
+
+    &__legend {
+        display: none;
+        visibility: hidden;
+    }
+
+
+    &__label {
+        color: lighten(@color__p--text, 25%);
+        font-size: 12px!important;
+        letter-spacing: 2px;
+        line-height: 18px;
+        text-align: left;
+        text-transform: uppercase;
+    }
+
+
+    &__select-wrap:after {
+        font-size: 18px;
+        right: 0;
+        top: 25px;
+    }
+
+
+    &__select {
+        height: 50px;
+        width: 100%;
+    }
+
+
+    &__button {
+        padding: 12px 10px;
+
+        &.icon--add {
+            width: 100%;
+        }
+
+        &:before {
+            display: none;
+            visibility: hidden;
+        }
+    }
+
+
+    &__view-basket-wrap .button {
+        background-color: fade(@color__button--background, 30%);
+        width: 100%;
+    }
+
+
+    &__product-attributes {
+        margin: 35px 0 0;
+    }
+
+
+    &__product-attribute-title,
+    &__category-link,
+    &__tag-link {
+        display: inline-block;
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+
+
+    &__product-attribute-title {
+        color: @color__form-label--text;
+    }
+
+
+    &__category-link,
+    &__tag-link {
+        color: @color__h2--text;
+    }
+
+
+    &__product-images {
+        background-color: #F7F7F7;
+        display: block;
+        height: auto;
+        width: 100%;
+    }
+
+
+    &__product-image,
+    &__product-image .image {
+        display: block;
+        margin: 0 auto;
+        max-height: 500px;
+        padding: 0;
+        visibility: visible;
+        width: auto;
+    }
+
+
+    &__product-image .image-link {
+        height: auto;
+        line-height: auto;
+    }
+
+
+    &__product-gallery {
+        .flex-display;
+        .justify-content(center);
+        margin: 15px 0 10px;
+        max-height: 100%;
+        width: 100%;
+        position: relative;
+
+
+
+        // Product images list element
+        .gallery-item {
+            background-color: transparent;
+            margin: 0 10px 10px;
+            width: auto;
+
+            height: auto;
+            line-height: 100%;
+            cursor: pointer;
+
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+
+
+        // Product image anchor link
+        .image-button {
+            .flex-display;
+            .align-items(center);
+            height: 100px;
+            width: 100px;
+
+
+            // Product image
+            .image {
+                max-height: 100%;
+                max-width: 100%;
+                height: auto;
+                width: auto;
+            }
+        }
+    }
+
+
+    &__product-content {
+        .align-self(center);
+        .flex-order(1);
+        padding: 40px 30px 30px;
+        text-align: center;
+        width: 100%;
+
+        @media @mobile-650 {
+            padding: 20px 0;
+        }
+    }
+
+
+    &__product-category,
+    &__tags-title,
+    &__tag-list {
+        line-height: 20px;
+    }
+}
