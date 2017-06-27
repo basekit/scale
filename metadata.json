@@ -6,6 +6,9 @@
     "pageTypes": ["home"],
     "screenshot":"screenshot.jpg",
      "images":[
+        "images/landscape-1.jpg",
+        "images/landscape-2.jpg",
+        "images/landscape-3.jpg"
     ],
     "colorSwatches":
     {
