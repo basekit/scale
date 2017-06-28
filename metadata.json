@@ -191,7 +191,7 @@
             "font__button--font-size" : "15px",
             "font__button--font-weight" : "400",
             "font__button--line-height" : "26px",
-            "font__button--letter-spacing" : "1px"
+            "font__button--letter-spacing" : "0px"
         },
         "twitter": {
             "color__twitter-item--background": "#f1f4f7",

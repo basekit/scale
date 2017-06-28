@@ -9,6 +9,18 @@
 // Button Widget
 // ------------------
 
+
+.button {
+    background-color: @color__button--background;
+    .transition(background-color 0.5s ease);
+
+
+    &:hover {
+        background-color: lighten(@color__button--background, 10%);
+    }
+}
+
+
 .buttonwidget__button,
 .contactform__button {
     background-color: @color__button--background;
