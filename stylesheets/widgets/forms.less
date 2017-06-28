@@ -226,6 +226,25 @@ textarea {
 }
 
 
+.advancedcontactform ul.option-list {
+    .flex-display;
+
+    @media @mobile-650 {
+        display: block;
+    }
+
+
+    .option-item--radio,
+    .option-item--checkbox {
+        margin-right: 10px;
+
+        @media @mobile-650 {
+            margin-right: 0;
+        }
+    }
+}
+
+
 .buttonwidget__button {
     padding: 14px 20px 14px 22px;
 
@@ -422,5 +441,33 @@ input:focus {
 
     &:-ms-input-placeholder {
         color: transparent;
+    }
+}
+
+
+
+
+
+// -------------------------------------
+//  Form - Responsive Columns
+// -------------------------------------
+
+
+.responsivecolumns .columns-three-left,
+.responsivecolumns .columns-three-middle,
+.responsivecolumns .columns-three-right,
+.responsivecolumns .columns-four-first,
+.responsivecolumns .columns-four-second,
+.responsivecolumns .columns-four-third,
+.responsivecolumns .columns-four-fourth {
+
+
+    .form-body {
+        display: block;
+    }
+
+
+    .form-group {
+        margin-right: 0;
     }
 }
