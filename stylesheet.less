@@ -122,9 +122,9 @@
 }
 
 
-.template-container > .bk-zone {
+.template-container #page-zones__main {
 
-    .widget:first-child {
+    > .widget:first-child {
         padding-top: 50px;
 
         @media @mobile-650 {
@@ -133,12 +133,12 @@
     }
 
 
-    .widget:first-child[data-name="map"],
-    .widget:first-child[data-name="image"],
-    .widget:first-child[data-name="slideshow"],
-    .widget:first-child[data-name="youtube"],
-    .widget:first-child[data-name="blogpost"],
-    .widget:first-child[data-name="ecomproduct"] {
+    > .widget:first-child[data-name="map"],
+    > .widget:first-child[data-name="image"],
+    > .widget:first-child[data-name="slideshow"],
+    > .widget:first-child[data-name="youtube"],
+    > .widget:first-child[data-name="blogpost"],
+    > .widget:first-child[data-name="ecomproduct"] {
         padding-top: 0;
     }
 }
