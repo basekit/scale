@@ -218,6 +218,11 @@ textarea {
     padding: 14px 25px 14px 25px;
     position: relative;
     text-decoration: none;
+    .transition(background 0.35s ease);
+
+    &:hover {
+         background-color: lighten(@color__button--background, 15%);
+    }
 }
 
 

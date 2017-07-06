@@ -34,11 +34,10 @@
 .ecomproductslist__listing-header,
 .ecomfeaturedproducts__listing-header {
     border: 2px solid @color__ecomproductslist-filters--background;
-    padding: 0 30px 40px;
+    padding: 0 ;
 
     @media @tablet-860 {
-        margin-top: 15px;
-        padding: 0;
+        margin-top: 10px;
     }
 }
 
@@ -196,7 +195,6 @@
 .ecomfeaturedproducts__product-list {
     .flex-display;
     .flex-wrap(wrap);
-    .justify-content(space-between);
     margin-top: 25px;
 }
 
@@ -228,12 +226,8 @@
 
     .product-item-image,
     .product-item-image .image-link {
-        max-height: 250px;
+        max-height: 400px;
         height: auto;
         line-height: normal;
-
-        @media @tablet-860 {
-            max-height: 400px;
-        }
     }
 }

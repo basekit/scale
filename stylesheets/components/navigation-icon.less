@@ -16,7 +16,7 @@
     input:checked + label:after,
     label .navigation-icon:before,
     label .navigation-icon:after {
-        background: @color__navigation--text--selected;
+        background: lighten(@color__navigation--text--selected, 10%);
     }
 }
 
@@ -41,10 +41,10 @@
 
 
     label {
-        margin: 2px auto;
+        margin: 4px auto;
         position: relative;
         width: 35px;
-        height: 36px;
+        height: 34px;
         display: block;
         cursor: pointer;
         background: transparent
@@ -61,7 +61,7 @@
         width: 35px;
         height: 2px;
         .border-radius(4px);
-        background: @color__navigation--text--selected;
+        background: lighten(@color__navigation--text--selected, 10%);
     }
 
 
@@ -89,7 +89,7 @@
         width: 35px;
         height: 2px;
         .border-radius(4px);
-        background: @color__navigation--text--selected;
+        background: lighten(@color__navigation--text--selected, 10%);
     }
 
 
@@ -115,7 +115,7 @@
         width: 35px;
         height: 2px;
         border-radius: 2px;
-        background: @color__navigation--text--selected;
+        background: lighten(@color__navigation--text--selected, 10%);
         -webkit-animation: animationBurgerTopReverse 1s ease forwards;
         animation: animationBurgerTopReverse 1s ease forwards;
     }
@@ -136,7 +136,7 @@
         width: 35px;
         height: 2px;
         border-radius: 2px;
-        background: @color__navigation--text--selected;
+        background: lighten(@color__navigation--text--selected, 10%);
         -webkit-animation: animationBurgerBottomReverse 1s ease forwards;
         animation: animationBurgerBottomReverse 1s ease forwards;
     }
