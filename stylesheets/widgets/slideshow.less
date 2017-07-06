@@ -12,6 +12,10 @@
 
 [data-widget-type="responsiveslideshow"] {
     padding-bottom: 30px;
+
+    @media @mobile-650 {
+        margin-bottom: 20px;
+    }
 }
 
 
@@ -199,6 +203,7 @@
         &:after {
             right: 14px;
             .transform(rotate(-45deg));
+            width: 45px;
         }
     }
 
@@ -210,6 +215,7 @@
         &:after {
             left: 14px;
             .transform(rotate(135deg));
+            width: 45px;
         }
     }
 
@@ -224,6 +230,7 @@
             margin-right: 0;
             position: relative;
             left: 2px;
+            width: 45px;
         }
     }
 
