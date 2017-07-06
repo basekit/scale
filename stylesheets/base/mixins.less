@@ -1,12 +1,34 @@
 
 // -----------------------------
-//  Mixins
+//  Base - Mixins
 // -----------------------------
 
 
 
-// Media Queries
-// ------------------------------------------
+
+
+// -----------------------------
+//  Table of Contents
+// -----------------------------
+
+//  1.      Media Queries
+
+//  2.      Mixins
+//  2.1     Border Radius
+//  2.2     Transition
+//  2.3     Animation
+//  2.4     Transform
+//  2.5     Rotate
+//  2.6     Gradient
+//  2.7     Flex Basis
+
+
+
+
+
+// ------------------------------
+//  1. Media Queries
+// ------------------------------
 
 
 @desktop-1024px: ~"only screen and (max-width: 1024px)";
@@ -16,11 +38,18 @@
 
 
 
-// General Mixins
-// ------------------------------------------
 
 
-// Border Radius
+// ------------------------------
+//  2. Mixins
+// ------------------------------
+
+
+
+
+// 2.1 - Border Radius
+// ------------------------------
+
 .border-radius(@radius: 6px) {
     -webkit-border-radius: @radius;
     -moz-border-radius: @radius;
@@ -28,7 +57,11 @@
 }
 
 
-// Transitions
+
+
+// 2.2 - Transition
+// ------------------------------
+
 .transition(@prop: all 0.5s ease) {
     -webkit-transition: @prop;
     -moz-transition:    @prop;
@@ -37,7 +70,11 @@
 }
 
 
-// Animations
+
+
+// 2.3 - Animation
+// ------------------------------
+
 .animation (@name, @duration: 2s, @ease: ease, @time: infinite, @direction: normal) {
     -webkit-animation: @name @duration @ease @time @direction;
     -moz-animation:    @name @duration @ease @time @direction;
@@ -46,7 +83,11 @@
 }
 
 
-// Transform
+
+
+// 2.4 - Transform
+// ------------------------------
+
 .transform(@transform: scale(1)) {
     -webkit-transform: @transform;
     -ms-transform: @transform;
@@ -54,7 +95,11 @@
 }
 
 
-// Rotate
+
+
+// 2.5 - Rotate
+// ------------------------------
+
 .rotate(@value) {
     moz-transform: rotate(@value);
     -o-transform: rotate(@value);
@@ -64,7 +109,11 @@
 }
 
 
-// Gradients
+
+
+// 2.6 - Gradient
+// ------------------------------
+
 .gradient(@startColor: #eee, @endColor: white) {
     background-color: @startColor;
     background: -webkit-gradient(linear, left top, left bottom, from(@startColor), to(@endColor));
@@ -75,7 +124,11 @@
 }
 
 
-// Flex Basis
+
+
+// 2.7 - Flex Basis
+// -----------------------------
+
 .flex-basis(@width: auto) {
   -webkit-flex-basis: @width;
       -ms-flex-basis: @width;

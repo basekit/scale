@@ -1,20 +1,48 @@
 
+// ----------------------------
+//  Components - Navigation
+// ----------------------------
+
+
+
+
+
 // -----------------------------
-// LESS - Navigation
+//  Table of Contents
 // -----------------------------
 
+//  1.      Navigation Icon
+
+//  2.      Navigation
+//  2.1     Navigation Open State
+//  2.2     Transition
+//  2.3     Animation
+//  2.4     Transform
 
 
 
-// Navigation Icon
-// ------------------
+
+
+// ------------------------------
+//  1. Navigation Icon
+// ------------------------------
 
 @import "@{templateLocal}/navigation-icon.less";
 
 
+// Hide default toggle
+.navigation-toggle {
+    display: none;
+    visibility: hidden;
+}
 
-// Navigation
-// ------------------
+
+
+
+
+// ------------------------------
+//  2. Navigation
+// ------------------------------
 
 
 [data-widget-type="extendednavigation"] {
@@ -27,6 +55,11 @@
     }
 }
 
+
+
+
+// 2.1 - Navigation Open State
+// ------------------------------
 
 .nav-open [data-widget-type="extendednavigation"] {
 
@@ -48,6 +81,12 @@
         margin-top: 0;
     }
 }
+
+
+
+
+// 2.1 - Navigation Item (li)
+// ------------------------------
 
 
 .navigation-item {
@@ -135,10 +174,3 @@
         }
     }
 }
-
-
-.navigation-toggle {
-    display: none;
-    visibility: hidden;
-}
-

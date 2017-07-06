@@ -26,6 +26,11 @@
 // ------------------------------
 
 
+[data-name="twitter"] .widget-overlay {
+    top: -35px!important;
+}
+
+
 .tweet-list {
     .flex-display;
     .flex-wrap(wrap);
@@ -51,8 +56,23 @@
     border: 2px solid @color__twitter-item--background;
     position: relative;
     padding: 50px 30px 25px;
-    margin: 0 5% 20px 0;
-    .flex(1 0 17%);
+    margin: 0 4% 40px 0;
+    .flex(1 0 30.66666667%);
+
+
+    &:last-child {
+        margin-bottom: 20px;
+        margin-right: 0;
+    }
+
+    @media only screen and (max-width: 1150px) {
+        .flex(1 0 48%);
+
+
+        &:nth-child(even) {
+            margin-right: 0;
+        }
+    }
 
     @media @tablet-860 {
         display: block;
@@ -61,11 +81,6 @@
 
     @media @mobile-650 {
         padding: 50px 25px 25px;
-    }
-
-    &:last-child {
-        margin-bottom: 20px;
-        margin-right: 0;
     }
 
 
@@ -106,6 +121,7 @@
         line-height: bkscale(@font__p--line-height, 0.7);
         font-weight: @font__p--font-weight;
         letter-spacing: @font__p--letter-spacing;
+        margin-right: 80px;
         position: absolute;
         left: 25px;
         top: -15px;

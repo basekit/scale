@@ -1,13 +1,37 @@
 
 // -----------------------------
-// LESS - Header
+//  Components - header
 // -----------------------------
 
 
 
 
-// Header
-// ------------------
+// -----------------------------
+//  Table of Contents
+// -----------------------------
+
+//  1.      Header
+
+//  2.      Social Icons Container
+//  2.1     Social Icons
+
+//  3.      Header - Advanced Contact Form
+//  3.1     Form Open State
+//  3.2     Form Styling
+//  3.3     Image Widget Toggle
+
+//  4.      Branding
+//  4.1     Logo
+
+//  5       Navigation
+
+
+
+
+
+// ------------------------------
+//  1. Header
+// ------------------------------
 
 .template-header {
     background-color: transparent;
@@ -16,8 +40,11 @@
 
 
 
-// Header - Social
-// ------------------
+
+
+// ------------------------------
+//  2. Social Icons Container
+// -------------------------------
 
 .template-header--social {
     .flex-display;
@@ -31,6 +58,15 @@
         .flex-wrap(wrap);
         margin-bottom: 40px;
     }
+}
+
+
+
+
+// 2.1 - Social Icons
+// ------------------------------
+
+.template-header--social {
 
 
     .social-link,
@@ -47,11 +83,13 @@
         transition: background-color 0.5s ease, color 0.25s ease, box-shadow 0.5s ease;
 
 
+        // Remove icon margin
         &:before {
             margin-right: 0;
         }
 
 
+        // Hover state
         &:hover {
             color: white;
             box-shadow: 0 2px 15px fade(@color__header--background, 30%);
@@ -108,6 +146,7 @@
     }
 
 
+    // Social icon (li)
     .social-item {
 
         @media @mobile-650 {
@@ -116,52 +155,52 @@
     }
 
 
+    // Hide social network name (icon only)
     .social-name {
         display: none;
-    }
-
-
-    .imagewidget__image-link {
-        cursor: pointer;
-        .flex-display;
-        .align-content(center);
-        .justify-content(center);
-    }
-
-
-    .imagewidget__image {
-        max-width: 17px;
-    }
-
-
-    [data-widget-type="image"] .widget-overlay {
-        display: none!important;
-        visibility: hidden;
     }
 }
 
 
 
-// Header - Advanced Contact Form
-// -------------------------------
 
+
+// -----------------------------------
+//  3. Advanced Contact Form Overlay
+// -----------------------------------
+
+
+
+
+// 3.1 - Form Open State
+// ------------------------------
 
 .contact-open {
     position: fixed;
     width: 100%;
 
 
+    // Brings social above form when open
     .template-header--social {
         z-index: 10003;
     }
 
 
+    // Brings form above main zone content when open
     .template-header [data-widget-type="advancedcontactform"],
     .template-header [data-name="advancedcontactform"] {
+        .transform(translate(0, 40px));
+        opacity: 1;
+        overflow-y: scroll;
+        visibility: visible;
         z-index: 10002;
     }
 }
 
+
+
+// 3.2 - Form Styling
+// ------------------------------
 
 .template-header {
 
@@ -191,14 +230,6 @@
             .justify-content(flex-end);
             padding: 25px;
         }
-
-
-        .contact-open & {
-            .transform(translate(0, 40px));
-            opacity: 1;
-            overflow-y: scroll;
-            visibility: visible;
-        }
     }
 
 
@@ -209,6 +240,7 @@
 
 
         &__form {
+
             @media @mobile-650 {
                 margin-bottom: 0;
                 padding: 30px 0;
@@ -217,21 +249,53 @@
 
 
         &__legend {
-            color: white;
+            color: @color__form-legend--text;
         }
 
 
         &__button {
-            background-color: #e7a022;
-            color: white;
+            background-color: @color__button--background;
+            color: @color__button--text;
         }
     }
 }
 
 
 
-// Header - Brand
-// ------------------
+
+// 3.3 - Image Widget Toggle
+// ------------------------------
+
+
+.template-header {
+
+    .imagewidget__image-link {
+        cursor: pointer;
+        .flex-display;
+        .align-content(center);
+        .justify-content(center);
+    }
+
+
+    .imagewidget__image {
+        max-width: 17px;
+    }
+
+
+    // Remove overlay from image toggle, to allow user to get to the form
+    [data-widget-type="image"] .widget-overlay {
+        display: none!important;
+        visibility: hidden;
+    }
+}
+
+
+
+
+
+// ------------------------------
+//  4. Branding
+// ------------------------------
 
 .template-header--brand {
     margin: 0 auto;
@@ -239,14 +303,22 @@
 }
 
 
+
+
+// 4.1 - Logo
+// ------------------------------
+
 [data-widget-type="logo"] {
     margin-bottom: 2px;
 }
 
 
 
-// Header - Navigation
-// ----------------------
+
+
+// ------------------------------
+//  5. Navigation
+// ------------------------------
 
 .template-header--nav {
 

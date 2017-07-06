@@ -1,26 +1,38 @@
 
 // -----------------------------
-// LESS - Typography
+//  Base - Typography
 // -----------------------------
 
 
 
 
-// Global
-// -------------------------
+
+// -----------------------------
+//  Table of Contents
+// -----------------------------
+
+//  1.      Headings
+
+//  2.      Body Text
+//  2.1     Body
+//  2.2     Paragraph
+//  2.3     Lists
+//  2.4     Anchor Links
+//  2.5     Blockquote
 
 
-body {
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-}
+
+
+
+// ------------------------------
+//  1. Headings
+// ------------------------------
 
 
 
 
-// Headings
-// -------------------------
-
+// 1.1 - Heading One
+// ------------------------------
 
 h1 {
     color: @color__h1--text;
@@ -38,6 +50,11 @@ h1 {
 }
 
 
+
+
+// 1.2 - Heading Two
+// ------------------------------
+
 h2 {
     color: @color__h2--text;
 
@@ -50,8 +67,27 @@ h2 {
 
 
 
-// Body Text
-// -------------------------
+
+// ------------------------------
+//  2. Body Text
+// ------------------------------
+
+
+
+
+// 2.1 - Body
+// ------------------------------
+
+body {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+
+
+
+// 2.2 - Paragraph
+// ------------------------------
 
 p {
     @media @mobile-650 {
@@ -61,12 +97,21 @@ p {
 }
 
 
-p,
+
+
+// 2.3 - Lists
+// ------------------------------
+
 li,
 ol {
     color: @color__p--text;
 }
 
+
+
+
+// 2.4 - Anchor Links
+// ------------------------------
 
 a {
     color: @color__h2--text;
@@ -75,8 +120,8 @@ a {
 
 
 
-// Blockquote
-// -------------------------
+// 2.5 - Blockquote
+// ------------------------------
 
 
 blockquote {
@@ -122,4 +167,3 @@ blockquote {
         top: 16px;
     }
 }
-
