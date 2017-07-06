@@ -194,11 +194,14 @@
 
 
 .tweet-metadata {
+    .flex-display;
+    .flex-wrap(nowrap);
     font-size: 85%;
     .flex-order(2);
     position: absolute;
     bottom: 15px;
     left: 30px;
+    right: 30px;
 
 
     .via,
@@ -210,6 +213,7 @@
 
     .timestamp {
         color: #a5a6af;
+        margin-right: 15px;
     }
 
 
@@ -222,8 +226,6 @@
 
     .retweeted-by {
         color: darken(@color__body--background, 30%);
-        display: inline-block;
-        width: 100%;
     }
 }
 

@@ -112,10 +112,6 @@
         padding: 0 65px;
     }
 
-    @media only screen and (max-width: 1024px) {
-        padding: 0 30px;
-    }
-
     @media @tablet-860 {
         padding: 0 60px;
     }
@@ -146,3 +142,26 @@
         padding-top: 0;
     }
 }
+
+
+.responsivecolumns .columns-four-first,
+.responsivecolumns .columns-four-second,
+.responsivecolumns .columns-four-third,
+.responsivecolumns .columns-four-fourth {
+
+    @media only screen and (max-width: 1024px)
+        margin-right: 3%;
+        width: 48.5%;
+
+
+        &:nth-child(even) {
+            margin-right: 0;
+        }
+    }
+
+    @media only screen and (max-width: 650px)
+        margin-right: 0;
+        width: 100%;
+    }
+}
+
