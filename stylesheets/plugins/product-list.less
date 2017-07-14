@@ -249,3 +249,53 @@
         line-height: normal;
     }
 }
+
+
+
+
+
+// --------------------------------------------
+//  3.  Ecom Product List - Responsive Columns
+// --------------------------------------------
+
+
+// Styles for responsive columns
+.responsivecolumns .columns {
+
+    &-two-left,
+    &-two-right,
+    &-three-left,
+    &-three-middle,
+    &-three-right,
+    &-four-first,
+    &-four-second,
+    &-four-third,
+    &-four-fourth {
+
+
+        .ecomproductslist__fieldset--filters {
+            margin: 0;
+        }
+    }
+
+
+    &-three-left,
+    &-three-middle,
+    &-three-right,
+    &-four-first,
+    &-four-second,
+    &-four-third,
+    &-four-fourth {
+
+
+        .ecomproductslist__product-item, .ecomfeaturedproducts__product-item {
+            .flex-basis(100%);
+        }
+
+
+        .ecomproductslist__product-item-article,
+        .ecomfeaturedproducts__product-item-article {
+            margin-right: 0;
+        }
+    }
+}
