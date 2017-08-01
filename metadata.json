@@ -225,7 +225,7 @@
             "color__slideshow-description--text" : "#bebebe",
             "color__slideshow-pagination-item--background": "#ffffff",
             "color__slideshow-pagination-item--background--selected": "@color__primary",
-            "color__slideshow-pagination-item--text": "#24455f"
+            "color__slideshow-pagination-item--text": "@color__primary"
         },
         "blog": {
             "color__blogpost-title--background": "#e7f5ff",
