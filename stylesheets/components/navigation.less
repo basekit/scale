@@ -129,10 +129,15 @@
 
 
 
-.navigation-list li.selected:not(.navigation-item--child) > .item-name:after {
-    background-color: @color__navigation--border;
-    margin-top: 12px;
-    height: 3px;
+.navigation-list li.selected {
+    .item-name {
+        color: @color__navigation--text--selected;
+    }
+    &:not(.navigation-item--child) > .item-name:after {
+        background-color: @color__navigation--border;
+        margin-top: 12px;
+        height: 3px;
+    }
 }
 
 
@@ -145,6 +150,7 @@
 
 
 .navigation-list--children {
+    min-width: 160px;
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.05);
 }
 
