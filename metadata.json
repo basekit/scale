@@ -2,6 +2,7 @@
     "name":"Crunch",
     "widgetVersion": 2,
     "pageTypes": ["home"],
+    "thumbnail": "thumbnail.png",
     "screenshot":"crunch-screenshot.jpg",
      "images":[
         "images/template-images/cloud-image-1.jpg",
@@ -28,7 +29,7 @@
         }
     },
     "fontSwatch": {
-       "title": "Rubik",
+       "title": "Roboto",
         "font1": {
             "font-family": "\"Roboto\", Geneva, \"Lucida Console\", sans-serif",
             "font-size": "32px",
