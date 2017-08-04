@@ -1,20 +1,20 @@
 {
-    "name":"Crunch",
+    "name":"Scaleup",
     "widgetVersion": 2,
     "pageTypes": ["home"],
     "thumbnail": "thumbnail.png",
-    "screenshot":"crunch-screenshot.jpg",
+    "screenshot":"scaleup-screenshot.jpg",
      "images":[
-        "images/template-images/cloud-image-1.jpg",
-        "images/template-images/cloud-image-2.jpg",
-        "images/template-images/cloud-image-3.jpg",
-        "images/template-images/cloud-image-4.jpg",
-        "images/template-images/cloud-image-5.jpg",
-        "images/template-images/cloud-image-6.jpg",
-        "images/template-images/cloud-image-7.jpg",
-        "images/template-images/cloud-image-8.jpg",
-        "images/template-images/cloud-image-9.jpg",
-        "images/template-images/cloud-image-10.jpg"
+        "images/template-images/sale-image-1.jpg",
+        "images/template-images/sale-image-2.jpg",
+        "images/template-images/sale-image-3.jpg",
+        "images/template-images/sale-image-4.jpg",
+        "images/template-images/sale-image-5.jpg",
+        "images/template-images/sale-image-6.jpg",
+        "images/template-images/sale-image-7.jpg",
+        "images/template-images/sale-image-8.jpg",
+        "images/template-images/sale-image-9.jpg",
+        "images/template-images/sale-image-10.jpg"
     ],
     "colorSwatches":
     {
@@ -118,8 +118,8 @@
     },
     "styles": {
         "colors": {
-            "color__primary": "#3C63F0",
-            "color__secondary": "#f5f6f7"
+            "color__primary": "#fc3c2d",
+            "color__secondary": "#042d5b"
         },
         "site": {
             "color__body--background": "#ffffff",
@@ -130,7 +130,7 @@
             "font__companyname--line-height": "30px",
             "font__companyname--font-weight": "400",
             "font__companyname--letter-spacing": "2px",
-            "color__companyname--text": "@color__primary"
+            "color__companyname--text": "@color__secondary"
         },
         "typography": {
             "font__h1--font-family": "@font-swatch1-font-family",
@@ -138,25 +138,25 @@
             "font__h1--line-height": "54px",
             "font__h1--font-weight": "400",
             "font__h1--letter-spacing": "0px",
-            "color__h1--text": "@color__primary",
+            "color__h1--text": "@color__secondary",
             "font__h2--font-family" : "@font-swatch2-font-family",
             "font__h2--font-size" : "32px",
             "font__h2--line-height" : "40px",
             "font__h2--font-weight" : "400",
             "font__h2--letter-spacing" : "0px",
-            "color__h2--text": "#24455f",
+            "color__h2--text": "@color__secondary",
             "font__h3--font-family" : "@font-swatch3-font-family",
             "font__h3--font-size" : "22px",
             "font__h3--font-weight" : "600",
             "font__h3--line-height" : "34px",
             "font__h3--letter-spacing" : "0px",
-            "color__h3--text": "#24455f",
+            "color__h3--text": "@color__secondary",
             "font__h4--font-family" : "@font-swatch4-font-family",
             "font__h4--font-size" : "20px",
             "font__h4--font-weight" : "400",
             "font__h4--line-height" : "36px",
             "font__h4--letter-spacing" : "0px",
-            "color__h4--text": "#24455f",
+            "color__h4--text": "@color__secondary",
             "font__p--font-family" : "@font-swatch5-font-family",
             "font__p--font-size" : "17px",
             "font__p--font-weight" : "400",
@@ -189,9 +189,9 @@
             "color__form-label--text": "#798da0"
         },
         "button": {
-            "color__button--background" : "@color__primary",
+            "color__button--background" : "@color__secondary",
             "color__button--text" : "#fff",
-            "color__button--background--hover": "@color__primary",
+            "color__button--background--hover": "darken(@color__secondary, 10%)",
             "color__button--text--hover" : "@color__button--text",
             "font__button--font-family" : "@font-swatch7-font-family",
             "font__button--font-size" : "15px",
@@ -219,8 +219,8 @@
             "color__gallery-description--text" : "@color__p--text"
         },
         "slideshow": {
-            "color__slideshow--background": "#13171a",
-            "color__slideshow-caption--background": "@color__primary",
+            "color__slideshow--background": "@color__secondary",
+            "color__slideshow-caption--background": "@color__secondary",
             "color__slideshow-title--text" : "#fff",
             "color__slideshow-description--text" : "#bebebe",
             "color__slideshow-pagination-item--background": "#ffffff",
