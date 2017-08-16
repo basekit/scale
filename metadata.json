@@ -2,8 +2,8 @@
     "name":"Scale",
     "widgetVersion": 2,
     "pageTypes": ["home"],
-    "thumbnail": "scale-screenshot.jpg",
-    "screenshot":"scale-screenshot-high.jpg",
+    "thumbnail": "thumbnail.png",
+    "screenshot":"scale-screenshot.jpg",
      "images":[
         "images/template-images/sale-image-1.jpg",
         "images/template-images/sale-image-2.jpg",
