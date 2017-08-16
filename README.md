@@ -1,3 +1,3 @@
-# Success
+# Scale
 
 Amazon JP Template
