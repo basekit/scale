@@ -1,1 +1,3 @@
-# love
+# Success
+
+Amazon JP Template

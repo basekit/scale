@@ -1,9 +1,9 @@
 {
-    "name":"Scaleup",
+    "name":"Success",
     "widgetVersion": 2,
     "pageTypes": ["home"],
-    "thumbnail": "thumbnail.png",
-    "screenshot":"scaleup-screenshot.jpg",
+    "thumbnail": "success-screenshot.jpg",
+    "screenshot":"success-screenshot-high.jpg",
      "images":[
         "images/template-images/sale-image-1.jpg",
         "images/template-images/sale-image-2.jpg",
