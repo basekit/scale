@@ -1,9 +1,9 @@
 {
-    "name":"Success",
+    "name":"Scale",
     "widgetVersion": 2,
     "pageTypes": ["home"],
-    "thumbnail": "success-screenshot.jpg",
-    "screenshot":"success-screenshot-high.jpg",
+    "thumbnail": "scale-screenshot.jpg",
+    "screenshot":"scale-screenshot-high.jpg",
      "images":[
         "images/template-images/sale-image-1.jpg",
         "images/template-images/sale-image-2.jpg",
